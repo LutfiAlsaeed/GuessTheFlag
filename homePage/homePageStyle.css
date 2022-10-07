@@ -1,0 +1,33 @@
+/* define variables for the primary colors */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url(img/Simple_world_map.svg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  margin: auto;
+  width: 450px;
+  margin-top: 15%;
+  border: 3px solid black;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+section * {
+  margin-top: 4px;
+  font-size: 1.5 20px;
+}
+section span {
+  font-size: 40px;
+}/*# sourceMappingURL=homePageStyle.css.map */

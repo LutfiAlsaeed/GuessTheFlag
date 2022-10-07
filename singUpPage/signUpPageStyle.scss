@@ -1,0 +1,46 @@
+/* define variables for the primary colors */
+$linear_background_white: rgba(255, 255, 255, 0.8);
+$primary_1: #b2ad7f;
+$primary_2: #878f99;
+$font_size_1:20px;
+$font_size_2:20px;
+
+$font_size_4:40px;
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-image: url(img/Simple_world_map.svg.png);
+    background-position: top; 
+    background-repeat: no-repeat; 
+    background-size: cover  ;
+    width:100%; 
+    height: 100%;
+}
+section {
+    margin: auto;
+    width: 450px;
+    margin-top: 15%;
+    border: 3px solid black;
+    padding: 10px;
+    background-color:$linear_background_white;
+    height: 450px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    * {
+        margin-top: 0px;
+        font-size: $font_size_1;
+    }
+
+    span{
+        font-size: $font_size_4;
+    }
+    
+
+}
