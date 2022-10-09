@@ -1,14 +1,29 @@
 {
   "name": "guesstheflag",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000G\u0000u\u0000e\u0000s\u0000s\u0000T\u0000h\u0000e\u0000F\u0000l\u0000a\u0000g\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LutfiAlsaeed/GuessTheFlag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LutfiAlsaeed/GuessTheFlag/issues"
+  },
+  "homepage": "https://github.com/LutfiAlsaeed/GuessTheFlag#readme"
 }
