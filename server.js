@@ -9,3 +9,4 @@ app.get('/',(req,res)=>{
 app.listen(PORT,()=>{
   console.log('here we goooo');
 })
+console.log('gi there');
