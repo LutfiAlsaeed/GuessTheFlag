@@ -30,6 +30,6 @@ app.get('/api/:flag',(req,res)=>{
   res.json(country)
 })
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
   console.log(`here we goooo on port${PORT}`);
 })
