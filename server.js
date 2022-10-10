@@ -3,21 +3,7 @@ const app=express();
 const cors=require('cors')
 const PORT=5000;
 
-const country={
-  'jo':{
-    'nameEn':'Jordan',
-    'nameAr':'الاردن',
-    'info':'',
-    'flag':''
-  },
-  'af':{
-    'nameEn':'Afghanistan',
-    'nameAr':'أفغانستان',
-    'info':'',
-    'flag':'https://www.worldometers.info/img/flags/af-flag.gif'
-  }
-  
-}
+
 
 app.get('/',(req,res)=>{
   res.sendFile(__dirname+'/homePage/homePage.html')
