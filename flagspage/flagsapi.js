@@ -1,10 +1,14 @@
+
+
 function country(nameEn,nameAr,flag,infoEn,infoAr){
   
     this.nameEn=nameEn;
     this.nameAr=nameAr;
-    this.flag=flag,
-    this.infoEn=infoEn
-    this.infoAr=infoAr
+    this.flag=flag;
+    this.infoEn=infoEn;
+    this.infoAr=infoAr;
+
+    
   }
 
   // the letter **A** countries 
@@ -224,4 +228,63 @@ function country(nameEn,nameAr,flag,infoEn,infoAr){
   // the letter **Z**
   const za= new country('Zambia','زامبيا','https://www.worldometers.info/img/flags/za-flag.gif','infoEn','infoAr');
   const zi= new country('Zimbabwe','زيمبابوي','https://www.worldometers.info/img/flags/zi-flag.gif','infoEn','infoAr');
+
+// call random flag 
+  function random_item(items)
+{
   
+return items[Math.floor(Math.random()*items.length)];
+     
+}
+
+
+let arr=[af,al,ag,an,ao,ac,ar,am,as,au,aj,
+  bf,ba,bg,bb,bo,be,bh,bn,bt,bl,bk,bc,br,bx,bu,uv,by,
+  ce,cv,cb,cm,ca,ct,cd,ci,ch,co,cn,cg,cs,cr,cu,cy,cz,
+  da,dj,dd,dr,dk,dc,
+  eg,es,ek,er,en,ew,et,
+  fj,fi,fr,
+  gb,ga,gg,gm,gh,gr,gj,gt,gv,gu,gy,
+  ha,ho,hu,
+  ic,ia,id,ir,iz,ie,it,
+  jm,ja,jo,
+  kz,ke,kr,ku,kg,
+  la,lg,le,lt,li,ly,ls,lh,lu,
+  ma,mi,my,mv,ml,mt,mh,mr,mp,mx,mc,md,mn,mg,mj,mo,mz,mb,
+  na,nr,np,nl,nz,nu,ng,ni,mk,no,om,
+  pk,ps,pm,pg,pa,pe,ph,pl,po,pt,qa,
+  ro,rs,rw,
+  sc,st,sz,sm,sb,sa,sg,sr,se,sl,sn,sv,si,sx,so,sf,sk,sd,sp,sq,sy,su,ns,sw,zs,ys,
+  ti,tz,th,tt,to,tn,td,ts,tu,tx,tv,
+  ua,uk,us,ug,up,uy,uz,
+  vt,va,ve,vm,ym,za,zi,
+  ]
+
+  // call  four random option 
+
+  let randomFlag1=random_item(arr);
+  let randomFlag2=random_item(arr);
+  let randomFlag3=random_item(arr);
+  let randomFlag4=random_item(arr);
+
+
+// sort the option in randomiz 
+let optionsArr=[]
+  optionsArr.push(randomFlag1)
+  optionsArr.push(randomFlag2)
+  optionsArr.push(randomFlag3)
+  optionsArr.push(randomFlag4)
+optionsArr.sort((a,b) => 0.5-Math.random());
+
+
+// render to HTML
+console.log(randomFlag1);
+document.getElementById("flag").src=randomFlag1.flag;
+document.getElementById("op1").innerText=optionsArr[0].nameEn
+document.getElementById("op2").innerText=optionsArr[1].nameEn
+document.getElementById("op3").innerText=optionsArr[2].nameEn
+document.getElementById("op4").innerText=optionsArr[3].nameEn
+
+
+
+
