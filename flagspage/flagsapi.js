@@ -237,6 +237,8 @@ return items[Math.floor(Math.random()*items.length)];
      
 }
 
+let score=0,counter=-1,mark;
+document.getElementById('score').innerText=score
 
 let arr=[af,al,ag,an,ao,ac,ar,am,as,au,aj,
   bf,ba,bg,bb,bo,be,bh,bn,bt,bl,bk,bc,br,bx,bu,uv,by,
@@ -259,13 +261,41 @@ let arr=[af,al,ag,an,ao,ac,ar,am,as,au,aj,
   ua,uk,us,ug,up,uy,uz,
   vt,va,ve,vm,ym,za,zi,
   ]
+  let arrx=[0,0,0,0],y=1;
+  document.getElementById('start').addEventListener('click',showAndHide)
+  document.getElementById('start').addEventListener('click',chickAnswer1)
 
+  function showAndHide(){
+    
+  }
+
+
+
+
+function chickAnswer1(){
+
+   if (arrx[0]==y){
+    score+=10 
+    console.log(arrx[0]+"      "+y);
+  }
+  counter++
+  console.log(counter);
+  if(counter==10){
+    mark=score/counter
+    alert ('your score ='+mark)
+    setTimeout(() => {
+  document.location.reload();
+}, 000);
+  }
+  
   // call  four random option 
 
   let randomFlag1=random_item(arr);
   let randomFlag2=random_item(arr);
   let randomFlag3=random_item(arr);
   let randomFlag4=random_item(arr);
+  console.log(randomFlag1);
+  y=randomFlag1
 
 
 // sort the option in randomiz 
@@ -276,15 +306,198 @@ let optionsArr=[]
   optionsArr.push(randomFlag4)
 optionsArr.sort((a,b) => 0.5-Math.random());
 
+arrx=optionsArr
+console.log(optionsArr);
 
 // render to HTML
-console.log(randomFlag1);
 document.getElementById("flag").src=randomFlag1.flag;
 document.getElementById("op1").innerText=optionsArr[0].nameEn
 document.getElementById("op2").innerText=optionsArr[1].nameEn
 document.getElementById("op3").innerText=optionsArr[2].nameEn
 document.getElementById("op4").innerText=optionsArr[3].nameEn
 
+// chick answers
+document.getElementById("op1").addEventListener('click',chickAnswer1)
+document.getElementById("op2").addEventListener('click',chickAnswer2)
+document.getElementById("op3").addEventListener('click',chickAnswer3)
+document.getElementById("op4").addEventListener('click',chickAnswer4)
 
 
+   document.getElementById('score').innerText=score
+}
+
+
+
+
+function chickAnswer2(){
+  
+  if (arrx[1]==y){
+    score+=10 
+    console.log(arrx[1]+"      "+y);
+  }
+  counter++
+  console.log(counter);
+  if(counter==10){
+    mark=score/counter
+    alert ('your score ='+mark)
+    setTimeout(() => {
+  document.location.reload();
+}, 000);
+  }
+  
+  // call  four random option 
+
+  let randomFlag1=random_item(arr);
+  let randomFlag2=random_item(arr);
+  let randomFlag3=random_item(arr);
+  let randomFlag4=random_item(arr);
+  console.log(randomFlag1);
+  y=randomFlag1
+
+
+// sort the option in randomiz 
+let optionsArr=[]
+  optionsArr.push(randomFlag1)
+  optionsArr.push(randomFlag2)
+  optionsArr.push(randomFlag3)
+  optionsArr.push(randomFlag4)
+optionsArr.sort((a,b) => 0.5-Math.random());
+
+arrx=optionsArr
+console.log(optionsArr);
+
+
+
+// render to HTML
+document.getElementById("flag").src=randomFlag1.flag;
+document.getElementById("op1").innerText=optionsArr[0].nameEn
+document.getElementById("op2").innerText=optionsArr[1].nameEn
+document.getElementById("op3").innerText=optionsArr[2].nameEn
+document.getElementById("op4").innerText=optionsArr[3].nameEn
+
+// chick answers
+document.getElementById("op1").addEventListener('click',chickAnswer1)
+document.getElementById("op2").addEventListener('click',chickAnswer2)
+document.getElementById("op3").addEventListener('click',chickAnswer3)
+document.getElementById("op4").addEventListener('click',chickAnswer4)
+
+  
+  
+    
+   
+   document.getElementById('score').innerText=score
+}
+function chickAnswer3(){
+  if (arrx[2]==y){
+    score+=10 
+    console.log(arrx[2]+"      "+y);
+  }
+  counter++
+  console.log(counter);
+  if(counter==10){
+    mark=score/counter
+    alert ('your score ='+mark)
+    setTimeout(() => {
+  document.location.reload();
+}, 000);
+  }
+  
+  // call  four random option 
+
+  let randomFlag1=random_item(arr);
+  let randomFlag2=random_item(arr);
+  let randomFlag3=random_item(arr);
+  let randomFlag4=random_item(arr);
+  console.log(randomFlag1);
+  y=randomFlag1
+
+
+// sort the option in randomiz 
+let optionsArr=[]
+  optionsArr.push(randomFlag1)
+  optionsArr.push(randomFlag2)
+  optionsArr.push(randomFlag3)
+  optionsArr.push(randomFlag4)
+optionsArr.sort((a,b) => 0.5-Math.random());
+
+arrx=optionsArr
+console.log(optionsArr);
+
+
+
+// render to HTML
+document.getElementById("flag").src=randomFlag1.flag;
+document.getElementById("op1").innerText=optionsArr[0].nameEn
+document.getElementById("op2").innerText=optionsArr[1].nameEn
+document.getElementById("op3").innerText=optionsArr[2].nameEn
+document.getElementById("op4").innerText=optionsArr[3].nameEn
+
+// chick answers
+document.getElementById("op1").addEventListener('click',chickAnswer1)
+document.getElementById("op2").addEventListener('click',chickAnswer2)
+document.getElementById("op3").addEventListener('click',chickAnswer3)
+document.getElementById("op4").addEventListener('click',chickAnswer4)
+
+  
+  
+    
+   
+   document.getElementById('score').innerText=score
+}
+function chickAnswer4(){
+  if (arrx[3]==y){
+    score+=10 
+    console.log(arrx[3]+"      "+y);
+  }
+  counter++
+  console.log(counter);
+  if(counter==10){
+    mark=score/counter
+    alert ('your score ='+mark+'/'+counter)
+    setTimeout(() => {
+  document.location.reload();
+}, 000);
+  }
+  // call  four random option 
+
+  let randomFlag1=random_item(arr);
+  let randomFlag2=random_item(arr);
+  let randomFlag3=random_item(arr);
+  let randomFlag4=random_item(arr);
+  console.log(randomFlag1);
+  y=randomFlag1
+
+
+// sort the option in randomiz 
+let optionsArr=[]
+  optionsArr.push(randomFlag1)
+  optionsArr.push(randomFlag2)
+  optionsArr.push(randomFlag3)
+  optionsArr.push(randomFlag4)
+optionsArr.sort((a,b) => 0.5-Math.random());
+
+arrx=optionsArr
+console.log(optionsArr);
+
+
+
+// render to HTML
+document.getElementById("flag").src=randomFlag1.flag;
+document.getElementById("op1").innerText=optionsArr[0].nameEn
+document.getElementById("op2").innerText=optionsArr[1].nameEn
+document.getElementById("op3").innerText=optionsArr[2].nameEn
+document.getElementById("op4").innerText=optionsArr[3].nameEn
+
+// chick answers
+document.getElementById("op1").addEventListener('click',chickAnswer1)
+document.getElementById("op2").addEventListener('click',chickAnswer2)
+document.getElementById("op3").addEventListener('click',chickAnswer3)
+document.getElementById("op4").addEventListener('click',chickAnswer4)
+
+  
+  
+    
+   
+   document.getElementById('score').innerText=score
+}
 
